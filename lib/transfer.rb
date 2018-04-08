@@ -22,7 +22,7 @@ class Transfer
       receiver.deposit(amount)
       @status = "complete"
     else
-      
+
     end
   end
 end
