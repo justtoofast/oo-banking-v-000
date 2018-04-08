@@ -22,4 +22,12 @@ class Transfer
       @status = "complete"
     end
   end
+
+  def reverse_transfer
+    if @status == complete
+      sender.deposit(amount)
+      receiver.remove(amount)
+      @status = "reversed"
+    end
+  end
 end
