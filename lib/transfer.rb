@@ -16,7 +16,7 @@ class Transfer
     if valid? == false
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
-    else
+    elsif @status == "pending"
       sender.remove(amount)
       receiver.deposit(amount)
       @status = "complete"
